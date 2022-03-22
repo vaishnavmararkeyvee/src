@@ -2,7 +2,7 @@ import React from 'react';
 import "./Add.css";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-
+import MyForm from './Dbform';
 const AddProducts = () => {
     let navigate = useNavigate();
     var [myvalue, setmyValue] = MyForm({ product: "", price: "", quantity: "", category: "", })
@@ -30,6 +30,7 @@ const AddProducts = () => {
                         <input type="text" required name="productname" value={myvalue.productname} onChange={setmyValue} />
                         <label>Name</label>
                     </div>
+                    </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
                     <div className="styled-input">
@@ -48,11 +49,13 @@ const AddProducts = () => {
                         <textarea required name="category" value={myvalue.category} onChange={setmyValue}></textarea>
                         <label> Category</label>
                     </div>
+                    </div>
                 </div>
                 <div className="col-xs-12">
                     <div className="btn-lrg submit-btn" onClick={addProducts}>Add products</div>
                 </div>
-         
+            </div>
+        
 
     );
 };
