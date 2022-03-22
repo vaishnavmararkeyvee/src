@@ -40,7 +40,7 @@ const Register = () => {
    // var [myvalue, setmyValue] = MyForm({ username: "", email: "", password: "" })
     const addUsers = () => {
         console.log(formValues)
-        axios.post("http://localhost:3005/api/signup", formValues).then(
+        axios.post("http://localhost:3005/api/register", formValues).then(
             (res) => {
                 alert("Success")
                 navigate("../signin", { replace: true })

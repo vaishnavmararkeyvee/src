@@ -19,7 +19,7 @@ function App() {
   }
   const setlogout = (l) => {
     setloggedout(l)
- //   setloggedin(l)
+    setloggedin(l)
   }
   if(loggedin===0)
    { return (
@@ -29,7 +29,7 @@ function App() {
         <div className="App">
         
           <Routes>
-            <Route path="/register" element={<Register />} ></Route>
+        <Route path="/register" element={<Register />} ></Route>
             <Route path="/signin" element={<SignIn  setlogin={setlogin}/>} ></Route>
           </Routes>
           
@@ -39,27 +39,27 @@ function App() {
     );}
     else if(loggedin===1)
     {
-      return (
-        <Router>
+    return (
+      <Router>
           
           <div className="App">
           
             <Routes>
             
               <Route path="/add" element={<AddProducts />} ></Route>
-              <Route path="/productlist/:id" element={<ProductList />} ></Route>
+            <Route path="/productlist/:id" element={<ProductList />} ></Route>
             
               
-            </Routes>
+           </Routes>
             
           </div>
         </Router>
       );
-    }
+   }
    
   
-    
-  }
+  } 
+  
 
 
 export default App;
